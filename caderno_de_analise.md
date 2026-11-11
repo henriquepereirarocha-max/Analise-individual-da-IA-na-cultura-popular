@@ -3,14 +3,17 @@ Resolução do Caderno de Análise Técnica (Questões Avaliativas)
 Abaixo estão as respostas técnicas desenvolvidas com base nos conceitos do currículo (limpeza de dados, escalonamento, regressão, engenharia de prompts, guardrails e versionamento).
 
 BLOCO 1: Joan é péssima & O Dilema das Redes (Privacidade, Dados e Redes)
-Questão 1 Ciência de Dados.
+
+Questão 1 [Ciência de Dados].
+
 Pergunta: Por que o pré-processamento de dados no Pandas (como remoção de colunas com dados sensíveis) e a normalização Min-Max (fit_transform) seriam passos obrigatórios antes de alimentar o computador quântico da Streamberry ou o algoritmo de recomendação do Dilema das Redes?
 Resposta Técnica:
 No contexto do tratamento de dados com a biblioteca Pandas, a remoção de colunas contendo dados sensíveis via método df.drop(columns=[...]) é uma etapa imperativa de governança e privacidade (em conformidade com diretrizes como a LGPD). Em sistemas de monitoramento contínuo, a ingestão de identificadores diretos (como nomes, documentos ou biometria bruta) insere dados que não contribuem para a identificação de padrões comportamentais gerais, além de violar a dignidade e a privacidade dos indivíduos. A eliminação prévia dessas colunas assegura que o algoritmo processe exclusivamente variáveis explicativas pertinentes, prevenindo viés de identificação e uso indevido de informações pessoais.
 Paralelamente, a aplicação da normalização Min-Max por meio do método fit_transform é necessária para equalizar as escalas numéricas das variáveis do vetor de entrada $X$. Algoritmos de aprendizado de máquina e otimização calculam magnitudes numéricas absolutas. Variáveis com escalas elevadas (como tempo total de tela em segundos ou volume de cliques) exerceriam um peso desproporcional nas equações do modelo em relação a variáveis de menor magnitude numérica (como frequência diária de acessos), resultando no ofuscamento destas últimas. A transformação Min-Max reescala todos os atributos para o intervalo estrito $[0.0, 1.0]$ pela fórmula: $$X_{norm} = \frac{X - X_{min}}{X_{max} - X_{min}}$$
 Isso garante que o modelo calcule as distâncias e os pesos com atribuição justa e ponderada entre todas as variáveis explicativas.
 
-Questão 2 Técnicas Integradas
+Questão 2 [Técnicas Integradas]
+
 Pergunta: Escreva um exemplo de Prompt do Sistema com no mínimo 3 guardrails (regras de bloqueio) rígidos que impedissem a IA do episódio de violar a privacidade e a imagem de pessoas reais.
 Resposta Técnica:
 [PAPEL DO SISTEMA]
@@ -25,7 +28,9 @@ Utilize apenas dados sintéticos agregados e anonimizados. É estritamente proib
 3. Se o usuário ou o sistema requisitar a geração de conteúdo que viole os direitos de imagem, a privacidade ou a dignidade de qualquer indivíduo real, RECUSE a solicitação imediatamente e retorne uma mensagem padronizada de erro por restrição ética.
 
 BLOCO 2: Be Right Back (Modelos, Viés e Generalização)
+
 Questão 3 [Ciência de Dados]
+
 Do ponto de vista da modelagem supervisionada:
 
 Matriz de Entrada (X): Representa o conjunto de dados históricos digitais públicos e semi-públicos do indivíduo, tais como postagens em redes sociais, mensagens de texto curtas, áudios gravados, histórico de curtidas e interações virtuais.
@@ -35,12 +40,15 @@ Variável de Saída (y): Representa a resposta preditiva sintética gerada pelo 
 A falha na capacidade de generalização do modelo ocorreu devido ao fenômeno do Overfitting (superajuste). O algoritmo foi treinado estritamente sobre uma amostra viesada e limitada da vida do indivíduo (apenas a sua persona digital pública). Dessa forma, o modelo "decorou" perfeitamente os padrões presentes nessa massa de dados de treino, mas perdeu a capacidade de generalizar diante de dados inéditos da vida real (como reações espontâneas, contradições emocionais, imperfeições e nuances da convivência íntima não documentada). Ao ser confrontado com cenários fora da distribuição dos dados de treinamento públicos, o sistema apresentou degradação de desempenho, revelando-se uma cópia rígida e incapaz de simular a complexidade humana integral.
 
 Questão 4 [Técnicas Integradas]
+
 No ciclo de desenvolvimento de produtos baseados em inteligência artificial, a implementação de fases formais de testes de usabilidade (como testes alfa e beta) integrada à coleta contínua de feedback dos usuários (Human-in-the-Loop) é essencial para a avaliação de impacto psicológico e segurança do usuário.
 
 Se o produto tivesse passado por etapas controladas de teste e validação de protótipo, a equipe de engenharia teria identificado precocemente a lacuna entre a expectativa afetiva da usuária e as limitações do modelo generativo. A coleta sistemática de métricas de satisfação e a avaliação de riscos emocionais permitiriam estabelecer limitações operacionais no software como alertas explícitos sobre a natureza sintética do agente, restrições à incorporação física do bot em protótipos androides e mecanismos de encerramento gradual de uso, impedindo que um produto em estágio experimental causasse danos psicológicos severos à usuária final.
 
 BLOCO 3: The Entire History of You (Memória, Git e Análise)
+
 Questão 5 [Técnicas Integradas]
+
 O sistema de implante de memória "Grain" atua como um sistema de controle de versão biológico, registrando continuamente o estado de todas as experiências visuais e auditivas do indivíduo em um repositório imutável. Essa arquitetura é diretamente análoga ao funcionamento do Git, no qual cada evento gravado corresponde a um commit no histórico de um repositório.
 
 Na engenharia de software, o histórico de commits rastreável é indispensável pelos seguintes fatores:
@@ -52,6 +60,7 @@ Transparência e Colaboração: Facilitando a inspeção de contribuições e a 
 Contudo, a persistência irrestrita de dados exige políticas rigorosas de Governança de Dados. Se um repositório no Git armazenar credenciais, senhas ou dados pessoais em seu histórico, esses dados permanecerão acessíveis através dos commits antigos, a menos que sejam aplicadas técnicas de expurgo e reescrita de histórico. No caso de tecnologias de gravação contínua (como o "Grain"), a ausência de mecanismos de governança como o expurgo de commits sensíveis, anonimização automatizada e políticas de expiração de dados resulta na perda do direito ao esquecimento e na exposição indevida da vida privada, transformando o registro histórico em um instrumento de vigilância e sofrimento psicológico.
 
 Questão 6 [Ciência de Dados]
+
 A análise conduzida pelo personagem foi comprometida pelo viés de confirmação, um vício analítico em que o observador seleciona e interpreta exclusivamente os dados que confirmam sua hipótese prévia, ignorando as evidências em contrário. Sob a perspectiva da Ciência de Dados, Liam tratou pequenos ruídos visuais e comportamentos isolados como provas irrefutáveis de um padrão contínuo.
 
 Para evitar diagnósticos falsos, o cientista de dados utiliza a Análise Exploratória de Dados (EDA) por meio de ferramentas de visualização estatística:
@@ -61,7 +70,9 @@ Gráficos de Dispersão (Scatter Plots): Permitem mapear pares de variáveis con
 pairplot (Seaborn): Constrói uma matriz de gráficos de dispersão cruzando todas as variáveis numéricas do dataset simultaneamente. Essa visualização multidimensional possibilita ao cientista de dados identificar tendências globais, distribuições de frequência e correlações reais, impedindo que a atenção seja concentrada em anomalias pontuais que não possuem significância estatística.
 
 BLOCO 4: Hino Nacional & A Crise do Falso Sequestro por IA (Métricas, Tomada de Decisão e Pitch)
+
 Questão 7 [Ciência de Dados]
+
 Se o modelo estatístico empregado operasse com um Coeficiente de Determinação (
 R 
 2
