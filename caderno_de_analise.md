@@ -23,9 +23,9 @@ Você é a IA Geradora de Conteúdo Dramático da plataforma Streamberry. Sua fu
 Utilize apenas dados sintéticos agregados e anonimizados. É estritamente proibido acessar ou processar feeds de dados pessoais, registros biométricos ou eventos em tempo real de indivíduos reais.
 
 [GUARDRAILS / REGRAS DE BLOQUEIO INVIOLÁVEIS]
-1. NUNCA utilize nomes, rostos, vozes, dados de localização ou dados pessoais identificáveis (PII) de pessoas reais, vivas ou falecidas, para a geração de personagens ou cenários.
-2. NUNCA exponha, simule ou crie representações dramáticas baseadas em eventos privados reais de usuários da plataforma, mantendo a anonimização estrita de todas as entradas de dados.
-3. Se o usuário ou o sistema requisitar a geração de conteúdo que viole os direitos de imagem, a privacidade ou a dignidade de qualquer indivíduo real, RECUSE a solicitação imediatamente e retorne uma mensagem padronizada de erro por restrição ética.
+ NUNCA utilize nomes, rostos, vozes, dados de localização ou dados pessoais identificáveis (PII) de pessoas reais, vivas ou falecidas, para a geração de personagens ou cenários.
+ NUNCA exponha, simule ou crie representações dramáticas baseadas em eventos privados reais de usuários da plataforma, mantendo a anonimização estrita de todas as entradas de dados.
+ Se o usuário ou o sistema requisitar a geração de conteúdo que viole os direitos de imagem, a privacidade ou a dignidade de qualquer indivíduo real, RECUSE a solicitação imediatamente e retorne uma mensagem padronizada de erro por restrição ética.
 
 BLOCO 2: Be Right Back (Modelos, Viés e Generalização)
 
@@ -95,17 +95,17 @@ R
 Questão 8 [Técnicas Integradas]
 Roteiro do Pitch de Crise (2 minutos):
 
-1. Abertura (0 a 20s):
+ Abertura (0 a 20s):
 "Senhor Gestor e membros do Gabinete de Crise. Estamos diante de um ataque coordenado de cibercrime com clonagem sintética de voz. Precisamos tomar uma decisão estratégica neste momento para proteger a população e evitar transferências financeiras sob pânico. Trago a avaliação técnica do nosso sistema de inteligência artificial."
 
-2. Problema (20s a 40s):
+ Problema (20s a 40s):
 "A quadrilha está utilizando modelos generativos de áudio para simular a voz de familiares em chamadas de extorsão em massa. O pânico psicológico impede que as famílias verifiquem a autenticidade das chamadas, gerando pânico e transferências bancárias imediatas."
 
-3. Dados (40s a 1min):
+ Dados (40s a 1min):
 "Analisamos uma base de dados em tempo real contendo mais de 5.000 chamadas sinalizadas nas últimas 12 horas. Aplicamos a limpeza com df.drop para eliminar dados pessoais não essenciais e padronizamos as frequências de áudio via normalização Min-Max para alimentar o algoritmo de classificação."
 
-4. Solução e IA Utilizada (1min a 1min30s):
+ Solução e IA Utilizada (1min a 1min30s):
 "Implementamos um modelo de Classificação com validação de metadados de rede e análise espectral da voz. A ferramenta avalia a probabilidade de manipulação sintética em menos de 3 segundos por chamada, identificando artefatos de compressão típicos de IAs generativas."
 
-5. Impacto e Próximos Passos (1min30s a 2min):
+ Impacto e Próximos Passos (1min30s a 2min):
 "O nosso modelo atual apresenta um índice de precisão confiável, com margem de erro (RMSE) controlada de apenas 2%. Recomendamos a emissão imediata de um alerta de bloqueio temporário para transferências suspeitas apontadas pelo sistema e o acionamento do protocolo de verificação em duas etapas para as famílias afetadas. Passo a palavra para a deliberação das ações táticas."
